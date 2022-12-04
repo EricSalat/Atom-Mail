@@ -99,13 +99,19 @@ form input {
   height: 50px;
 }
 
-/* form input + button {
-  height: 50px;
-  background-color: transparent;
-  background-color: aqua;
-} */
+
+.imagen-maquetacion {
+  background-color: lightgreen;
+  border-style: solid;
+  border-color: black;
+  height: 500px;
+}
 
 .highlight-text {
 font-size: 20px;
 color: grey;
 }
+
+
+/*MAIN QUE HAY QUE PASAR A MODULE*/
+
