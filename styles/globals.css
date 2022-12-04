@@ -6,6 +6,7 @@
     --secondaryColor: #342c7c;
     --auxiliarColor: #388452;
     --textColor: #211222;
+    --auxiliarTextColor: #404040;
     --backgroundColor: #f7f5ff;
     --heroColor: #f9f9f9;
     
@@ -50,4 +51,61 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: var(--mainColor);
+}
+
+
+
+section {
+  padding-bottom: 5rem;
+}
+
+h1, h2, h3, p {
+  font-family: var(--mainFont);
+}
+
+h1{
+  font-size: 60px;
+  font-weight: 600;
+}
+
+
+h2{
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-family: var(--mainFont);
+  font-size: 1.1rem;
+}
+
+li {
+  font-family: var(--mainFont);
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+b{
+  color: #6e24ff;
+}
+
+form input {
+  font-family: var(--mainFont);
+  padding: 0 15px;
+  height: 50px;
+}
+
+/* form input + button {
+  height: 50px;
+  background-color: transparent;
+  background-color: aqua;
+} */
+
+.highlight-text {
+font-size: 20px;
+color: grey;
 }

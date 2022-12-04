@@ -1,32 +1,26 @@
-import "../styles/Footer.module.css";
+import SubscribeForm from '../components/SubscribeForm';
+import styles from "../styles/Footer.module.css";
 import {
-  BsArrowRight,
   BsFacebook,
   BsTwitter,
   BsLinkedin,
 } from "react-icons/bs";
+import { HiArrowNarrowRight } from "react-icons/hi";
+
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="d-flex justify-content-between">
-        <div className="container">
+    <footer className={styles.footer}>
+      <div className="container">
+        <div className="d-flex justify-content-between">
           <div>
             <p className="fw-bold logo">AtomMail</p>
             <p>Subscribe to keep up with the latest news</p>
-            <form action="#" method="post">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email address"
-              />
-              <a href="#">
-                <button type="submit" className="main-button ms-2">
-                  <BsArrowRight size="2rem" />
-                </button>
-              </a>
-            </form>
+
+            <SubscribeForm
+              id="subscribe"
+              content={<HiArrowNarrowRight size="25" />}
+             />
           </div>
 
           <div>
@@ -63,29 +57,36 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-        </div>
-        <div>
-          <p className="text-uppercase fw-bold">Get in touch</p>
-          <div>
-            <a href="">
-              <BsLinkedin
-                className="social-media-icons"
-              // size="16"
-              />
-            </a>
-            <a href="">
-              <BsTwitter
-                className="social-media-icons" />
-            </a>
-            <a href="">
-              <BsFacebook
-                className="social-media-icons"
 
-              />
-            </a>
+        </div>
+        <div className="d-flex justify-content-between">
+          <div>
+            <p className="text-uppercase fw-bold">Get in touch</p>
+            <div>
+              <a href="">
+                <BsLinkedin
+                  className={styles["social-media-icons"]}
+                />
+              </a>
+              <a href="">
+                <BsTwitter
+                  className={styles["social-media-icons"]} />
+              </a>
+              <a href="">
+                <BsFacebook
+                  className={styles["social-media-icons"]}
+                />
+              </a>
+            </div>
+
+            <div>
+              <p className="text-center py-4 mb-2">Developed with 💚 by <a href="https://ericsalat.com/">Èric Salat</a></p>
+            </div>
+
+
           </div>
-        </div>  
-        </div> 
-    </footer>   
-  );          
+        </div>
+      </div>
+    </footer>
+  );
 }

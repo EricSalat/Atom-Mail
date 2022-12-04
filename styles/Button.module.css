@@ -13,6 +13,7 @@
   border-color: var(--secondaryColor);
   color: #fff;
 }
+
 form .main-button:hover {
   background-color: #000;
   border-color: #000;
