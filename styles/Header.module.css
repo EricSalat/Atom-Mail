@@ -1,0 +1,20 @@
+/* HEADER */
+
+header .logo {
+  font-family: var(--mainFont);
+  font-size: 1.3rem;
+  color: var(--textColor);
+  font-weight: 700;
+  align-items: baseline;
+}
+
+@media (max-width: 576px) {
+  header .logo {
+    font-size: 1rem;
+    }
+}
+
+
+
+
+

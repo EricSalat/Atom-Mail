@@ -1,26 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --mainFont:'Space Grotesk', sans-serif;
+    --mainColor: #6e24ff;
+    --secondaryColor: #342c7c;
+    --auxiliarColor: #388452;
+    --textColor: #211222;
+    --backgroundColor: #f7f5ff;
+    --heroColor: #f9f9f9;
+    
+}
+
+.inactive {
+  display: none;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+
+/*HEADER*/
+header button {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+nav ul li {
+  font-family: var(--mainFont);
+  font-weight: 600;
+  margin-right: 30px;
+  margin-left: 30px;
+  color: var(--textColor);
+  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--textColor);
+}
+nav ul li a:hover {
+  color: var(--mainColor);
 }

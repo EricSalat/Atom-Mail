@@ -1,0 +1,199 @@
+/*BODY*/
+
+section {
+  padding-bottom: 5rem;
+}
+
+h1, h2, h3, p {
+  font-family: var(--mainFont);
+}
+
+h1{
+  font-size: 60px;
+  font-weight: 600;
+}
+
+
+h2{
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-family: var(--mainFont);
+  font-size: 1.1rem;
+}
+
+li {
+  font-family: var(--mainFont);
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+b{
+  color: #6e24ff;
+}
+
+input#email {
+  font-family: var(--mainFont);
+  padding: 10px 15px 10px 15px;
+}
+
+.highlight-text {
+font-size: 20px;
+/* font-weight: 300; */
+color: grey;
+}
+
+.header-container, .body-container, .footer-container { 
+/* max-width: 1080px;  */
+  max-width: 80%;
+  margin: 0 auto; 
+}
+
+.main-button{
+  padding: 5px 10px 5px 10px;
+  border-color: #6e24ff;
+  border-style: solid;
+  font-family: var(--mainFont);
+  font-weight: 600;
+  color: #fff;
+  background-color: #6e24ff;
+}
+
+.main-button:hover {
+  background-color: var(--secondaryColor);
+  border-color: var(--secondaryColor);
+  color: #fff;
+}
+form .main-button:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+.secondary-button{
+  font-family: var(--mainFont);
+  font-weight: 600;
+  background-color: transparent;
+  border-style: none;
+}
+
+.secondary-button:hover {
+  color: var(--mainColor);
+}
+
+.terciary-button {
+  color: var(--mainColor);
+  background-color: transparent;
+  padding: 8px 30px 8px 30px
+}
+
+.terciary-button:hover {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+}
+
+form .main-button {
+  background-color: #000;
+  border-color: #000;
+  padding: 10px 15px 10px 15px;
+}
+
+footer .main-button {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+  padding: 6px 15px 5px 15px;
+}
+
+footer .main-button:hover {
+  background-color: var(--secondaryColor);
+  border-color: var(--secondaryColor);
+}
+
+
+.imagen-maquetacion {
+  background-color: lightgreen;
+  border-style: solid;
+  border-color: black;
+  height: 500px;
+}
+
+.my-cards {
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  height: 200px;
+  width: 200px;
+  flex-direction: column;
+  border-radius: 3%;
+  
+}
+
+.my-cards:hover, .my-cards-selected {
+  background-color: #000;
+  color: #fff;
+}
+
+div .mycards > .bi {
+  margin-bottom: 50px;
+}
+
+.hightlighed-links {
+  color: var(--mainColor);
+  font-weight: 700;
+  text-decoration:underline
+}
+
+
+.hightlighed-links:hover {
+  color: var(--secondaryColor);
+}
+
+/* li:before {
+  content: "\F797";
+  margin-right: 5px;
+} */
+
+/*Això de dalt noe stà funcionant...*/
+
+.circle-number {
+  background-color: var(--mainColor);
+  display: inline;
+  padding: 20px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  height: 50px;
+  width: 50px;
+}
+
+.steps-card {
+  height: auto;
+  width: 300px;
+  margin: 10px;
+  padding: 50px 5px 50px 5px;
+}
+
+.steps-card h3 {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+
+.carousel-control-next-icon,.carousel-control-prev-icon, .carrousel-control-prev, .carrousel-control-next{
+  color: #000 !important;
+  font-size: 0.5em;
+  background-color: var(--mainColor);
+  opacity: 1;
+}
+
+.testimonial-user {
+  border-radius: 50%;
+  border: 2px solid var(--secondaryColor);
+}
