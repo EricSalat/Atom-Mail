@@ -4,6 +4,7 @@ import SubscribeForm from '../components/SubscribeForm';
 import Card from "../components/Card";
 import Layout from './Dashboard/Layout';
 import NavBar from './Dashboard/NavBar';
+import MailStatistic1 from './Dashboard/Statistics/MailStatistic1';
 import { BsBuilding, BsChatDots, BsBriefcase, BsHouseDoor } from "react-icons/bs";
 
 
@@ -24,9 +25,10 @@ export default function Main() {
         </section>
 
         <section>
-          <div className="container">
-            <Layout />
-            <NavBar />
+          <div className="container bg-dark">
+          <MailStatistic1 />
+            {/* <Layout /> */}
+            {/* <NavBar /> */}
           </div>
         </section>
 

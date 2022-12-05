@@ -5,7 +5,6 @@ import Main from "../components/Main";
 import Footer from '../components/Footer';
 import SubscribeForm from '../components/SubscribeForm';
 import Layout from '../components/Dashboard/Layout';
-import Circle from '../components/Dashboard/Circle';
 import ButtonStyles from "../styles/Button.module.css";
 
 

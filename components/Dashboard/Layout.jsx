@@ -1,4 +1,4 @@
-import MailStatistic1 from "./MailStatistic1";
+import MailStatistic1 from "./Statistics/MailStatistic1";
 import NavBar from "./NavBar";
 import styles from "../../styles/MailStatistic.module.css";
 

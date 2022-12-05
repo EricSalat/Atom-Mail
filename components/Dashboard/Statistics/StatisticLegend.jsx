@@ -1,4 +1,4 @@
-import styles from "../../styles/MailStatistic.module.css";
+import styles from "../../../styles/MailStatistic.module.css";
 
 export default function StatisticLegend({text, mails, style}) {
   return(
