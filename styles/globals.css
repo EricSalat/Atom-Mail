@@ -99,18 +99,27 @@ form input {
 }
 
 
-.imagen-maquetacion {
-  background-color: lightgreen;
-  border-style: solid;
-  border-color: black;
-  height: 500px;
-}
-
 .highlight-text {
 font-size: 20px;
 color: grey;
 }
 
+.my-cards {
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  height: 200px;
+  width: 200px;
+  flex-direction: column;
+  border-radius: 3%;
+}
+
+.my-cards:hover, .card-selected {
+  background-color: #000;
+  color: #fff;
+}
 
 /*MAIN QUE HAY QUE PASAR A MODULE*/
 

@@ -2,13 +2,24 @@ import Image from 'next/image'
 import styles from "../styles/Body.module.css";
 import SubscribeForm from '../components/SubscribeForm';
 import Card from "../components/Card";
+import CardDescription from './CardDescription';
 import Layout from './Dashboard/Layout';
-import NavBar from './Dashboard/NavBar';
-import MailStatistic1 from './Dashboard/Statistics/MailStatistic1';
 import { BsBuilding, BsChatDots, BsBriefcase, BsHouseDoor } from "react-icons/bs";
+import { useState } from "react";
 
 
 export default function Main() {
+
+  const [enterprise, setEnterprise] = useState(true);
+  const [sms, setSms] = useState(false);
+  const [agencies, setAgencies] = useState(false);
+  const [institution, setInstitution] = useState(false);
+
+  const [enterpriseCard, setEnterpriseCard] = useState(true);
+  const [institutionCard, setInstitutionCard] = useState(false);
+  const [smsCard, setSmsCard] = useState(false);
+  const [agenciesCard, setAgenciesCard] = useState(false);
+
   return (
     <main>
       <div className="container">
@@ -23,14 +34,11 @@ export default function Main() {
               content="Let's Talk" />
           </div>
         </section>
-
-        <section>
-          <div className="container bg-dark">
-          <MailStatistic1 />
-            {/* <Layout /> */}
-            {/* <NavBar /> */}
-          </div>
-        </section>
+        
+        <Layout />
+          
+          
+        
 
         <section id="solutions">
           <div className="container">
@@ -39,43 +47,48 @@ export default function Main() {
             </div>
 
             <div className="d-flex justify-content-center">
-              <Card id="card1" content={<BsBuilding size="3rem" className="mb-4" />} text="Enterprise" />
-              <Card id="card2" content={<BsChatDots size="3rem" className="mb-4" />} text="SMS and self-employed" />
-              <Card id="card3" content={<BsBriefcase size="3rem" className="mb-4" />} text="Agencies" />
-              <Card id="card4" content={<BsHouseDoor size="3rem" className="mb-4" />} text="Institution" />
+              <Card 
+              id="card1" 
+              content={<BsBuilding size="3rem" />} 
+              text="Enterprise"
+              classname="card-selected"
+              onclick={() => {setEnterprise(true); setSms(false); setAgencies(false); setInstitution(false)}} />
+
+              <Card id="card2" content={<BsChatDots size="3rem" />} text="SMS and self-employed"
+              onclick={() => {setEnterprise(false); setSms(true); setAgencies(false); setInstitution(false)}} />
+
+              <Card id="card3" content={<BsBriefcase size="3rem" classname="mb-4" />} text="Agencies"
+              onclick={() => {setEnterprise(false); setSms(false); setAgencies(true); setInstitution(false)}} />
+
+              <Card id="card4" content={<BsHouseDoor size="3rem" classname="mb-4" />} text="Institution"
+              onclick={() => {setEnterprise(false); setSms(false); setAgencies(false); setInstitution(true)}} />
             </div>
 
 
-
-            <div className="d-flex justify-content-center" >
-              <div className="col-8" id="enterprise" >
-                <h3>Enterprise</h3>
-                <p>Enterprise Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quas libero esse, eos obcaecati dolores aspernatur quibusdam quaerat unde voluptatum ut dignissimos iste, tempore incidunt animi, non ea fugit consectetur.</p>
-                <p><a href="#" className="hightlighed-links">Find Out More</a></p>
-              </div>
-            </div>
-            <div className="d-flex justify-content-center" >
-              <div className="col-8 inactive" id="sms">
-                <h3>SMS and self-employed</h3>
-                <p>Atom is very useful for SMS and self-employed workers due to its ease of use to manage your campaigns for
-                  a single platform, without the ned for a large team to carry them out.</p>
-                <p><a href="#" className="hightlighed-links">Find Out More</a></p>
-              </div>
-            </div>
-            <div className="d-flex justify-content-center" >
-              <div className="col-8 inactive" id="agencies">
-                <h3>Agencies</h3>
-                <p>Agencies Agencies Lorem ipsum, dolor sit amet consectetur adipisicing elit. At officiis amet debitis aut rerum nihil deleniti consequuntur magni. Cupiditate tempora quibusdam corrupti nemo est dolores odio ipsum at, possimus officia?</p>
-                <p><a href="#" className="hightlighed-links">Find Out More</a></p>
-              </div>
-            </div>
-            <div className="d-flex justify-content-center" >
-              <div className="col-8 inactive" id="institution">
-                <h3>Institution</h3>
-                <p>Institution Institution Lorem ipsum, dolor sit amet consectetur adipisicing elit. At officiis amet debitis aut rerum nihil deleniti consequuntur magni. Cupiditate tempora quibusdam corrupti nemo est dolores odio ipsum at, possimus officia?</p>
-                <p><a href="#" className="hightlighed-links">Find Out More</a></p>
-              </div>
-            </div>
+            <CardDescription
+              title="Enterprise"
+              description="Enterprise Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quas libero esse, eos obcaecati dolores aspernatur quibusdam quaerat unde voluptatum ut dignissimos iste, tempore incidunt animi, non ea fugit consectetur."
+              id=""
+              classname={enterprise ? null : "inactive"}
+            />
+            <CardDescription
+              title="SMS and self-employed"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quas libero esse, eos obcaecati dolores aspernatur quibusdam quaerat unde voluptatum ut dignissimos iste, tempore incidunt animi, non ea fugit consectetur."
+              id=""
+              classname={sms ? null : "inactive"} 
+            />
+            <CardDescription
+              title="Agencies"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quas libero esse, eos obcaecati dolores aspernatur quibusdam quaerat unde voluptatum ut dignissimos iste, tempore incidunt animi, non ea fugit consectetur."
+              id=""
+              classname={agencies ? null : "inactive"}
+            />
+            <CardDescription
+              title="Institution"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quas libero esse, eos obcaecati dolores aspernatur quibusdam quaerat unde voluptatum ut dignissimos iste, tempore incidunt animi, non ea fugit consectetur."
+              id=""
+              classname={institution ? null : "inactive"}
+            />
           </div>
         </section>
 

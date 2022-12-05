@@ -29,13 +29,9 @@ input#email {
   width: 200px;
   flex-direction: column;
   border-radius: 3%;
-  
 }
 
-.my-cards:hover, .my-cards-selected {
-  background-color: #000;
-  color: #fff;
-}
+
 
 div .mycards > .bi {
   margin-bottom: 50px;

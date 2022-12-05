@@ -3,10 +3,10 @@ import StatisticHeader from "./MailStatisticHeader";
 import StatisticLegend from "./StatisticLegend";
 import Circle from "./Circle";
 
-export default function MailStatistic1() {
+export default function MailStatistic1({classname}) {
   return(
   
-    <div className={`${styles["statistic-layout"]} ${"col-4"}`}>
+    <div className={classname}>
       <StatisticHeader />
       <div className={styles["statistic-body"]}>
         <div className="circle-div">
