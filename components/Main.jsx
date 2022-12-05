@@ -2,6 +2,8 @@ import Image from 'next/image'
 import styles from "../styles/Body.module.css";
 import SubscribeForm from '../components/SubscribeForm';
 import Card from "../components/Card";
+import Layout from './Dashboard/Layout';
+import NavBar from './Dashboard/NavBar';
 import { BsBuilding, BsChatDots, BsBriefcase, BsHouseDoor } from "react-icons/bs";
 
 
@@ -23,7 +25,8 @@ export default function Main() {
 
         <section>
           <div className="container">
-            <div className="imagen-maquetacion"></div>
+            <Layout />
+            <NavBar />
           </div>
         </section>
 
